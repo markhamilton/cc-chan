@@ -1,0 +1,38 @@
+{
+  "name": "cc-chan",
+  "version": "1.0.0",
+  "description": "p-please senpai /// can i see your card details?",
+  "main": "app.js",
+  "author": "Mark Hamilton",
+  "scripts": {
+    "start": "electron .",
+    "publish:osx": "electron-packager . --icon=img/girl_icon.icns --platform=darwin --out=release-builds --prune=true --overwrite",
+    "publish:win": "electron-packager . --icon=img/girl_icon.png --platform=win32 --out=release-builds --prune=true --overwrite"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^5.0.0",
+    "electron-packager": "^13.1.1"
+  },
+  "build": {
+    "asar": false,
+    "appId": "info.markhamilton.cc-chan",
+    "category": "public.app-category.finance",
+    "dmg": {
+      "title": "CC Chan",
+      "contents": [
+        {
+          "x": 410,
+          "y": 125,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 125,
+          "type": "file"
+        }
+      ]
+    }
+  }
+}
